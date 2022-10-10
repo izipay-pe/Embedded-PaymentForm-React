@@ -14,8 +14,12 @@ const data = [
   {id: 4, name: "Agente Izipay", price: 200,url: "https://www.izipay.pe/_nuxt/dist/img/agente-izipay-large.74b5825.png"},
 ]
 
-const publicKey = "44842422:testpublickey_Az8ibtrm5cAhb3aOt1g20oQtgpR14c9TSdPYSVhqFlj2P";
+// Clave pública de test o producción.
+const publicKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+// Url de servidor de Izipay
 const endPoint = "https://api.micuentaweb.pe";
+// Url de tu servidor
+const server = "https://tudominio.com/"
 
 function App() {
 
@@ -23,8 +27,7 @@ function App() {
   const [addProduct, setAddProduct] = useState({});
 
   const createPayment = (objJson) => new Promise((resolve, reject) => {
-
-    axios.post("http://localhost:80/000webhost/proyecto-izipay/api/CreatePayment.php",objJson)
+    axios.post(server+"CreatePayment.php",objJson)
       .then(({data}) => {
           console.log(data);
           return KRGlue.loadLibrary(endPoint, publicKey, data.formToken);
