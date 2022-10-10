@@ -1,6 +1,7 @@
 # Embedded-PaymentForm-T1-React
 
 Ejemplo del formulario incrustado de Izipay con React.
+![pagar](src/assets/images/pagar.png)
 
 ## Requisitos Previos
 
