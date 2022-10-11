@@ -7,6 +7,7 @@ Ejemplo del formulario incrustado de Izipay con React.
 
 * Servidor Web que soporte Javascript
 * Node 16.14 o superior
+* Claves de integración, [Ejemplo de como obtenerlo](https://github.com/izipay-pe/Obtener_Credenciales#readme)
 
 ## 1.- Descargar
 Descargar el proyecto .zip haciendo click [Aquí](https://github.com/izipay-pe/Embedded-PaymentForm-T1-React/archive/refs/heads/main.zip) o clonarlo desde Git.
@@ -30,4 +31,6 @@ npm run build
 Comprimir la carpeta `build/` que se ha creado con el comando anterior y subirlo a su hosting.
 
 ## 6.- Demo
+URL de ejemplo [Aquí](https://app-izipay.000webhostapp.com/react/)
+
 ![demo](src/assets/images/demo.png)
