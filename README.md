@@ -101,7 +101,7 @@ function App() {
                     <div className="d-flex justify-content-center">
                         <div id="myDIV" className="formulario" style={{display: isShow?"block":"none" }}>
                             <div id="form">
-                                <PaymentForm popin={true} />
+                                <PaymentForm />
                             </div> 
                         </div>                         
                     </div>                    
