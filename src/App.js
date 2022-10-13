@@ -1,95 +1,122 @@
-import {  useState } from 'react';
-import KRGlue from "@lyracom/embedded-form-glue";
-import axios from "axios";
-import './App.css';
-import { IzipayFormEmbedded } from './components/payment-form/IzipayFormEmbedded';
-import { IziProduct } from './components/izi-product/IziProduct';
-import { SoporteEcoomerce } from './components/support-contact/SoporteEcoomerce';
-import { Checkout } from './components/checkout/Checkout';
-
-const data = [
-  {id: 1, name: "izi Jr", price: 90,url: "https://www.izipay.pe/_nuxt/dist/img/izi-jr-large.1272137.png"},
-  {id: 2, name: "izi android", price: 100,url: "https://www.izipay.pe/_nuxt/dist/img/izi-android-large.15bbbeb.png"},
-  {id: 3, name: "Gestiona tu negocio", price: 250,url: "https://www.izipay.pe/_nuxt/dist/img/img-pos.8c27182.png"},
-  {id: 4, name: "Agente Izipay", price: 200,url: "https://www.izipay.pe/_nuxt/dist/img/agente-izipay-large.74b5825.png"},
-]
-
-// Clave pública de test o producción.
-const publicKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-// Url de servidor de Izipay
-const endPoint = "https://api.micuentaweb.pe";
-// Url de tu servidor
-const server = "https://yourserver.com/"
+import { useState } from 'react';
+import KRGlue from '@lyracom/embedded-form-glue';
+import axios from 'axios';
+import PaymentForm from './components/PaymentForm';
 
 function App() {
 
-  const [view, setView] = useState(0);
-  const [addProduct, setAddProduct] = useState({});
+  const [isShow, setIsShow] = useState(false);
+  const [isValid, setIsValid] = useState(true);
+  const [amount, setAmount] = useState("");
 
-  const createPayment = (objJson) => new Promise((resolve, reject) => {
-    axios.post(server+"CreatePayment.php",objJson)
-      .then(({data}) => {
-          console.log(data);
-          return KRGlue.loadLibrary(endPoint, publicKey, data.formToken);
-      })
-      .then(({KR}) => KR.setFormConfig({
-          'kr-language': 'es-ES',
-      }))
-      .then(({KR}) => KR.attachForm("#myPaymentForm"))
-      .then(({KR, result}) => {
-        
-        resolve(KR.showForm(result.formId))
-      })
-      .catch(error=> reject(error))
-  })
-
-  const addToCart = (product)=>{
-    setAddProduct(product)
-    setView(1);
-  }
-
-  const checkoutPayment = (dataCheckout) => {
-    setView(2);
-    console.log(dataCheckout)
-
-    createPayment(dataCheckout)
-    .then(res=>{
-      console.log("form loaded",res)
-    })
-    .catch(error => console.log(error))
-  }
-
-  const routes = (route) => {
-    switch(route){
-      case 0:
-        return (
-          <div className='List-Product'>
-            {
-              data.map(item => <IziProduct product={item} key={item.id} buy={addToCart} />)
-            }
-          </div>
-        );
-      case 1:
-        // return(<IzipayFormEmbedded/>);
-        return<Checkout addProduct={addProduct} checkoutPayment={checkoutPayment}/>;
-      case 2:
-        return <IzipayFormEmbedded/>
-      default:
-        setView(0);
-      break;
+  const publicKey = "~~CHANGE_ME_ENDPOINT~~";
+  const endPoint = "~~CHANGE_ME_ENDPOINT~~";
+  const formToken = "~~CHANGE_ME_ENDPOINT~~";
+  const server = "http://localshot:3000";
+  
+  const payment = ()=>{
+    const ExpRegSoloNumeros="^[0-9]+$";
+    if(amount.match(ExpRegSoloNumeros)!=null){
+      // Obtener el formToken
+      getFormToken(amount,publicKey,endPoint);
+      setIsShow(true);
+    }else{
+      setIsValid(false);
+      setTimeout(()=>setIsValid(true),3000)
     }
   }
+  const getFormToken = (monto, publicKey, domain) => {
+    const dataPayment = {
+        amount: monto*100,
+        currency: "USD",
+        customer:{
+          email: "example@gmail.com"
+        },
+        orderId: "pedido-0"
+    }
+    // axios.post(`${server}/api/createPayment`,dataPayment)
+    // .then(({data}) => {
+      KRGlue.loadLibrary(domain,publicKey)
+      .then(({KR}) => KR.setFormConfig({
+        formToken: formToken
+        // formToken:data.formToken,
+      }))
+      .then(({ KR }) => KR.onSubmit(validatePayment) )
+      .then(({ KR }) => KR.attachForm("#form") )
+      .then(({ KR, result }) => KR.showForm(result.formId))
+  // })
+    .catch(err=>console.log(err))
 
-  return (<>
-    <div className="App">
-      <h2>Pasarela de pago <img src='https://iziweb001.s3.amazonaws.com/webresources/img/logo.png' alt='Logo de Izipay'/></h2>
-      {
-        routes(view)
+  }
+
+
+  const validatePayment = (resp) => {
+    axios.post(`${server}/api/validatePayment`, resp)
+    .then(({data}) => {
+      if (data==="Valid Payment"){
+        setIsShow(false);
+        alert("Pago Satisfactorio");
+        
+      }else{
+        alert("Pago Inválido");
       }
+    })
+    return false;
+  }
+
+  return (
+    <div className='container'>
+      <main>
+          <div className="py-5 text-center">      
+            <h3>Ejemplo de un formulario incrustado con React</h3>
+            <p className="lead"></p>
+          </div>
+
+          <div className="row g-5">
+            <div className="col-md-5 col-lg-4 order-md-last">
+              <div className="d-flex justify-content-center">
+                <h4>
+                  <span className="text-primary">Formulario Popin</span>                  
+                </h4>
+              </div>
+              <hr className="my-4"/>
+              <div className="d-flex justify-content-center">
+                <div id="myDIV" className="formulario" style={{display: isShow?"block":"none" }}>
+                  <div id="form">
+                    <PaymentForm />
+                  </div> 
+                </div>                         
+              </div>                    
+              <hr className="my-4"/>
+            </div>
+              
+
+            <div className="col-md-7 col-lg-8">            
+              <form className="needs-validation">
+                <div className="row g-3">
+                  <div className="col-sm-6">
+                    <label htmlFor="firstName" className="form-label">Monto Total</label>
+                    <input type="text" className="form-control" onChange={e=>setAmount(e.target.value) } value={amount} placeholder="S/." required />
+                    <div className="invalid-feedback" style={{display: isValid ?"none":"block"}}>Ingrese un monto válido.</div>
+                  </div>
+
+                  <div className="col-sm-6">
+                    <label htmlFor="lastName" className="form-label">Moneda</label>
+                    <input type="text" className="form-control" id="lastName" value="USD" readOnly/>                    
+                  </div>
+                </div>            
+            
+                <hr className="my-4"/>
+
+                <button onClick={payment} className="w-100 btn btn-primary btn-lg" type="button">Finalizar con el Pago</button>
+              </form>
+            </div>
+          </div>
+      </main>
+
     </div>
-    <SoporteEcoomerce />
-    
-  </>);
+
+  );
 }
 
 export default App;
