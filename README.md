@@ -6,7 +6,7 @@ Esta página explica cómo crear un formulario de pago dinámico desde cero util
 
 ## Requisitos Previos
 
-* Extraer credenciales del Back Office Vendedor. [Guía Aquí](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
+* Claves de autentificación. [Guía Aquí](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
 * Debe instalar la [versión de LTS node.js](https://nodejs.org/es/).
 
 ## 1.- Crear el proyecto
