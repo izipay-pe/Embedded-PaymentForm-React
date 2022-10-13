@@ -35,7 +35,7 @@ ver el resultado en http://localhost:3000/
 ## 2.- Agregar el formulario de pago
 **Nota**: Reemplace **[CHANGE_ME]** con sus credenciales de `API REST` extraídas desde el Back Office Vendedor, ver [Requisitos Previos](#Requisitos_Previos).
 
-* Editar en public/index.html en la sección HEAD.
+* Editar en `public/index.html` en la sección HEAD.
 
 ```javascript
 <!-- tema y plugins. debe cargarse en la sección HEAD -->
@@ -46,7 +46,7 @@ href="~~CHANGE_ME_ENDPOINT~~/static/js/krypton-client/V4.0/ext/classic-reset.css
 </script>
 ```
 
-* Edite el componente predeterminado src/App.js, con el siguiente codigo si quiere interactuar con el formulario de pago, con un endpoint propio.
+* Edite el componente predeterminado `src/App.js`, con el siguiente codigo si quiere interactuar con el formulario de pago, con un endpoint propio.
 
 ```js
 import {  useState } from 'react';
