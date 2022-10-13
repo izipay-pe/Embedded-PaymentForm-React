@@ -1,4 +1,4 @@
-# Popin Payment Form React
+# Embedded Payment Form React
 
 Esta página explica cómo crear un formulario de pago dinámico desde cero utilizando React y la biblioteca de embedded-form-glue.
 
