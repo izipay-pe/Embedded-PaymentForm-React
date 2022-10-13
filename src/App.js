@@ -19,7 +19,7 @@ const publicKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
 // Url de servidor de Izipay
 const endPoint = "https://api.micuentaweb.pe";
 // Url de tu servidor
-const server = "https://tudominio.com/"
+const server = "https://yourserver.com/"
 
 function App() {
 
