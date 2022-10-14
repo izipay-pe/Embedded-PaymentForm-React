@@ -136,7 +136,7 @@ For more information, please take a look to:
 - [Primeros pasos: pago simple](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/start.html)
 - [Servicios web - referencia de la API REST](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/api/reference.html)
 
-# 4.- Verificación de hash de pago
+## 4.- Verificación de hash de pago
 
 El hash de pago debe validarse en el lado del servidor para evitar la exposición de su clave hash personal.
 
@@ -217,7 +217,7 @@ function App() {
 (...)
 ```
 
-## 3.- Implementar IPN
+## 5.- Implementar IPN
 
 * Ver manual de implementacion de la IPN [Aquí](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/kb/payment_done.html)
 
