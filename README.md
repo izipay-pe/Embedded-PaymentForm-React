@@ -70,7 +70,7 @@ function App() {
   const getFormToken = (monto, publicKey, domain) => {
     const dataPayment = {
         amount: monto*100,
-        currency: "USD",
+        currency: "PEN",
         customer:{
           email: "example@gmail.com"
         },
