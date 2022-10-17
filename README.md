@@ -127,8 +127,8 @@ export default App;
 
 El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
 
-Si intenta pagar, tendrá el siguiente error: **CLIENT_998: Demo form, see the documentation**.
-Es porque el **formToken** que ha definido usando **KR.setFormConfig** está configurado en **DEMO-TOKEN-TO-BE-REPLACED**.
+Si intenta pagar, tendrá el siguiente error: **CLIENT_100: Demo form, see the documentation**.
+Es porque el **formToken** es inválido, la configuración defina usando **KR.setFormConfig** está configurado en **DEMO-TOKEN-TO-BE-REPLACED**.
 
 you have to create a **formToken** before displaying the payment form using Charge/CreatePayment web-service.
 For more information, please take a look to:
