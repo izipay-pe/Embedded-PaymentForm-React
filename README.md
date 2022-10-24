@@ -2,6 +2,10 @@
 
 Esta página explica cómo crear un formulario de pago dinámico desde cero utilizando React y la biblioteca de embedded-form-glue.
 
+ <p align="center">
+  <img src="https://raw.githubusercontent.com/izipay-pe/Embedded-PaymentForm-T1.Net/main/images/formulario-incrustado.png" alt="Formulario"/>                                             
+ </p>   
+
 <a name="Requisitos_Previos"></a>
 
 ## Requisitos Previos
