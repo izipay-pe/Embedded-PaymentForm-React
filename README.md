@@ -127,25 +127,7 @@ function App() {
 export default App;
 ```
 
-## 3.- Transacción de prueba
-
-El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
-
-Si intenta pagar, tendrá el siguiente error: **CLIENT_100: Demo form, see the documentation**.
-Es porque el **formToken** es inválido, la configuración defina usando **KR.setFormConfig** está configurado en **DEMO-TOKEN-TO-BE-REPLACED**.
-
-you have to create a **formToken** before displaying the payment form using Charge/CreatePayment web-service.
-For more information, please take a look to:
-
-- [Formulario incrustado: prueba rápida](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/quick_start_js.html)
-- [Primeros pasos: pago simple](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/start.html)
-- [Servicios web - referencia de la API REST](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/api/reference.html)
-
-* El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
-
-  ![debug](https://github.com/izipay-pe/Embedded-PaymentForm-T1.Net/blob/main/images/tarjetasprueba2.png)
-
-## 4.- Verificación de hash de pago
+## 2.1.- Verificación de hash de pago
 
 El hash de pago debe validarse en el lado del servidor para evitar la exposición de su clave hash personal.
 
@@ -226,7 +208,27 @@ function App() {
 (...)
 ```
 
-## 5.- Implementar IPN
+## 3.- Transacción de prueba
+
+El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
+
+Si intenta pagar, tendrá el siguiente error: **CLIENT_100: Demo form, see the documentation**.
+Es porque el **formToken** es inválido, la configuración defina usando **KR.setFormConfig** está configurado en **DEMO-TOKEN-TO-BE-REPLACED**.
+
+you have to create a **formToken** before displaying the payment form using Charge/CreatePayment web-service.
+For more information, please take a look to:
+
+- [Formulario incrustado: prueba rápida](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/quick_start_js.html)
+- [Primeros pasos: pago simple](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/start.html)
+- [Servicios web - referencia de la API REST](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/api/reference.html)
+
+* El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
+
+  ![debug](https://github.com/izipay-pe/Embedded-PaymentForm-T1.Net/blob/main/images/tarjetasprueba2.png)
+
+
+
+## 4.- Implementar IPN
 
 * Ver manual de implementacion de la IPN [Aquí](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/kb/payment_done.html)
 
