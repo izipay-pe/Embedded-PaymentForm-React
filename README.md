@@ -214,19 +214,18 @@ function App() {
 
 El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
 
+  ![debug](https://github.com/izipay-pe/Embedded-PaymentForm-T1.Net/blob/main/images/tarjetasprueba2.png)
+
 Si intenta pagar, tendrá el siguiente error: **CLIENT_100: Demo form, see the documentation**.
 Es porque el **formToken** es inválido, la configuración defina usando **KR.setFormConfig** está configurado en **DEMO-TOKEN-TO-BE-REPLACED**.
 
 you have to create a **formToken** before displaying the payment form using Charge/CreatePayment web-service.
-For more information, please take a look to:
+
+Para obtener más información, eche un vistazo a:
 
 - [Formulario incrustado: prueba rápida](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/quick_start_js.html)
 - [Primeros pasos: pago simple](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/start.html)
 - [Servicios web - referencia de la API REST](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/api/reference.html)
-
-* El formulario de pago está listo, puede intentar realizar una transacción utilizando una tarjeta de prueba con la barra de herramientas de depuración (en la parte inferior de la página).
-
-  ![debug](https://github.com/izipay-pe/Embedded-PaymentForm-T1.Net/blob/main/images/tarjetasprueba2.png)
 
 **NOTA**
 
