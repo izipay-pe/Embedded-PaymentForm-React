@@ -1,22 +1,24 @@
 # Embedded Payment Form React
 
-Esta página explica cómo crear un formulario de pago dinámico desde cero utilizando React y la biblioteca de embedded-form-glue.
+<p align="justify">Ejemplo de un formulario Embedido con REACT y la biblioteca de embedded-form-glue, este ejemplo te servira como guia para poder ejecutar el formulario de pago de Izipay dentro de cualquier proyecto que utilice la libreria de REACT. React te ayuda a crear interfaces de usuario interactivas de forma sencilla. Diseña vistas simples para cada estado en tu aplicación, y React se encargará de actualizar y renderizar de manera eficiente los componentes correctos cuando los datos cambien..<p>
 
  <p align="center">
   <img src="https://raw.githubusercontent.com/izipay-pe/Embedded-PaymentForm-T1.Net/main/images/formulario-incrustado.png" alt="Formulario"/>                                             
  </p>   
 
+## Este ejemplo es solo una guía para poder realizar la integración de la pasarela de pagos, puede realizar las modificaciones necesarias para su proyecto.
+
 <a name="Requisitos_Previos"></a>
 
 ## Requisitos Previos
 
-* Claves de autentificación. [Guía Aquí](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
+* Acceso al Back Office Vendedor (BOV) y Claves de autenticación. [Guía Aquí](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
 * Debe instalar la [versión de LTS node.js](https://nodejs.org/es/).
 
 ## 1.- Crear el proyecto
-* Descargar el proyecto .zip haciendo click [Aquí](https://github.com/izipay-pe/Embedded-PaymentForm-T1-React/archive/refs/heads/main.zip) o clonarlo desde Git.
+* Descargar el proyecto .zip haciendo click [Aquí](https://github.com/izipay-pe/Embedded-PaymentForm-React/archive/refs/heads/main.zip) o clonarlo desde Git.
 ```sh
-git clone https://github.com/izipay-pe/Embedded-PaymentForm-T1-React.git
+git clone https://github.com/izipay-pe/Embedded-PaymentForm-React.git
 ``` 
 
 * Ingrese a la carpeta raiz del proyecto.
@@ -226,9 +228,42 @@ For more information, please take a look to:
 
   ![debug](https://github.com/izipay-pe/Embedded-PaymentForm-T1.Net/blob/main/images/tarjetasprueba2.png)
 
+**NOTA**
 
+1.- Paso de la tienda al modo PRODUCTION 
 
-## 4.- Implementar IPN
+     Modifique su implementación para utilizar el incrustado en producción:
+     * la contraseña de producción,
+     * clave pública de producción,
+     * la clave HMAC-SHA-256 de producción para calcular la firma contenida en el campo kr-hash.
+     
+2.- No tengo una cuenta activa con Izipay. [Suscribete Aquí](https://online.izipay.pe/comprar/cliente)
+
+   | CARACTERÍSTICAS | VALOR |
+   | ------------- | ------------- |
+   | Usuario de prueba  | 89289758  |
+   | Contraseña de prueba  | testpassword_7vAtvN49E8Ad6e6ihMqIOvOHC6QV5YKmIXgxisMm0V7Eq  |
+   | Clave pública de prueba  | 89289758:testpublickey_TxzPjl9xKlhM0a6tfSVNilcLTOUZ0ndsTogGTByPUATcE  |
+   | Clave HMAC SHA256 de prueba  | fva7JZ2vSY7MhRuOPamu6U5HlpabAoEf8VmFHQupspnXB  |
+   | URL de base  | https://api.micuentaweb.pe |
+   | URL para el cliente JavaScript | https://api.micuentaweb.pe/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js  |
+
+## 4.- Gestionar la notificacion de fin de pago (IPN)
+
+IPN son las siglas de Instant Payment Notification (URL de notificación instantánea, en inglés). Al crear una transacción o cambiar su estado, nuestros servidores emitirán una IPN que llamará a una URL de notificación en sus servidores. Esto le permitirá estar informado en tiempo real de los cambios realizados en una transacción.
+
+Las IPN son la única manera de recibir notificaciones en los casos siguientes:
+
+* La conexión a Internet del comprador se ha cortado.
+* El comprador cierra su navegador durante el pago.
+* Se ha rechazado una transacción.
+* El comprador no ha terminado su pago antes de la expiración de su sesión de pago.
+
+Por lo tanto, es obligatorio integrar las IPN.
+
+   <p align="center">
+     <img src="/images/IPN-imagen.png?raw=true" alt="Formulario"/>
+   </p>  
 
 * Ver manual de implementacion de la IPN [Aquí](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/kb/payment_done.html)
 
