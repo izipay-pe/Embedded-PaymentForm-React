@@ -178,6 +178,13 @@ Para desplegar la pasarela, se utiliza la libreria  [Embedded Form Glue](https:/
   }, []);	
 
 ```
+- En el body del HTML se debe encontrar el div con el ID donde se mostrará la pasarela.
+```html
+<div id="micuentawebstd_rest_wrapper">
+  <div className="kr-embedded"></div>
+</div>  
+```
+
 - Adicionalmente se debe incluir en la cabecera los estilos necesarios para desplegar la pasarela. Podrás encontrarlos en el archivo `index.html`
 
 ```html
