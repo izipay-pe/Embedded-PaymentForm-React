@@ -150,6 +150,11 @@ const Formulario = ({ onPayment }) => {
 ### Visualizar formulario
 Para desplegar la pasarela, se utiliza la libreria  [Embedded Form Glue](https://github.com/lyra/embedded-form-glue) y es necesario recepcionar los datos que nos devuelve el servidor para configurar la pasarela a través de los métodos de la libreria:
 
+- Importar la libreria
+```node
+import KRGlue from '@lyracom/embedded-form-glue'	
+```
+
 - Cargar las funciones y clases principales de la pasarela a través de  `KRGlue.loadLibrary()` junto a llave `publicKey` que recibimos del servidor.
 - Configurar la pasarela con el método  `KR.setFormConfig` junto con el `formToken` que recibimos del servidor.
 - Incrustamos la pasarela con el método `KR.attachForm` y definimos el div con un ID donde se mostrará la pasarela.
