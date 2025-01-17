@@ -22,6 +22,9 @@
 En este manual encontrarás una guía detallada para configurar un proyecto en **[React]** integrado con la pasarela de pagos de IZIPAY. Te proporcionaremos instrucciones claras y credenciales de prueba para instalar y configurar el proyecto, permitiéndote trabajar y realizar pruebas de manera segura en tu propio entorno local.
 Este manual está diseñado para facilitar la comprensión del flujo de integración de la pasarela de pagos y maximizar el rendimiento de tu desarrollo front-end. **Ten en cuenta que este proyecto se conecta a un servidor (Backend) para gestionar las operaciones críticas relacionadas con la pasarela de pagos**.
 
+> [!IMPORTANT]
+> En la última actualización se agregaron los campos: **nombre del tarjetahabiente** y **correo electrónico** (Este último campo se visualizará solo si el dato no se envía en la creación del formtoken). 
+
 <p align="center">
   <img src="https://github.com/izipay-pe/Imagenes/blob/main/formulario_incrustado/Imagen-Formulario-Incrustado.png?raw=true" alt="Formulario" width="350"/>
 </p>
