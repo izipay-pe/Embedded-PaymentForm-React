@@ -48,7 +48,7 @@ git clone https://github.com/izipay-pe/Embedded-PaymentForm-React.git
 Realice la conexión al servidor modificando la ruta `[midominio.com]` por la ruta de su servidor.
 
 - Editar el archivo `src/components/Formulario.jsx`:
-```react
+```node
 const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -62,7 +62,7 @@ const handleSubmit = async (e) => {
 ```
 
 - Editar el archivo `src/components/Checkout.jsx`:
-```react
+```node
 //Al recibir la respuesta enviar a su servidor a validar los datos
 KR.onSubmit( paymentData => {
   axios.post('[midominio.com]/validate', {
@@ -107,7 +107,7 @@ Para configurar la pasarela, es necesario generar un formtoken. Esto se realiza 
 
 En el archivo `src/components/Formulario.jsx` se realiza la solicitud al servidor (Backend) junto con los datos recolectados del formulario. 
 
-```react
+```node
 const Formulario = ({ onPayment }) => {
   const navigate = useNavigate();
   
@@ -155,7 +155,7 @@ Para desplegar la pasarela, se utiliza la libreria  [Embedded Form Glue](https:/
 - Incrustamos la pasarela con el método `KR.attachForm` y definimos el div con un ID donde se mostrará la pasarela.
 
  En el archivo `src/components/Checkout.jsx`:
-```react
+```node
   useEffect(() => {
     //Endpoint de izipay
     let endpoint = "https://static.micuentaweb.pe";
@@ -191,7 +191,7 @@ Para desplegar la pasarela, se utiliza la libreria  [Embedded Form Glue](https:/
 
 ### Validación de firma
 Se configura el método `KR.onSubmit` que recepciona la respuesta del pago y se envía los datos a su servidor para validar la firma, esto garantiza la integridad de los datos. Podrás encontrarlo en el archivo `src/components/Checkout.jsx`.
-```react
+```node
 //Al recibir la respuesta del pago, enviar a su servidor a validar los datos
 KR.onSubmit( paymentData => {
     axios.post('[midominio.com]/validate', {
