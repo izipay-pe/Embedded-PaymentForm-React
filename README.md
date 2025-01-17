@@ -6,16 +6,16 @@
 
 ## Índice
 
-➡️ [1. Introducción](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#%EF%B8%8F-1-introducci%C3%B3n)  
-🔑 [2. Requisitos previos](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#-2-requisitos-previos)  
-🚀 [3. Ejecutar ejemplo](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#-3-ejecutar-ejemplo)  
-🔗 [4. Pasos de integración](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#4-pasos-de-integraci%C3%B3n)  
-💻 [4.1. Desplegar pasarela](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#41-desplegar-pasarela)  
-💳 [4.2. Analizar resultado de pago](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#42-analizar-resultado-del-pago)  
-📡 [4.3. Pase a producción](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#43pase-a-producci%C3%B3n)  
-🎨 [5. Personalización](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#-5-personalizaci%C3%B3n)  
-🛠️ [6. Servidores](https://github.com/izipay-pe/Readme-Template/blob/main/README.md#-6-servidores)    
-📚 [7. Consideraciones](https://github.com/izipay-pe/Readme-Template/tree/main?tab=readme-ov-file#-6-consideraciones)
+➡️ [1. Introducción](#-1-introducci%C3%B3n)  
+🔑 [2. Requisitos previos](#-2-requisitos-previos)  
+🚀 [3. Ejecutar ejemplo](#-3-ejecutar-ejemplo)  
+🔗 [4. Pasos de integración](#4-pasos-de-integraci%C3%B3n)  
+💻 [4.1. Desplegar pasarela](#41-desplegar-pasarela)  
+💳 [4.2. Analizar resultado de pago](#42-analizar-resultado-del-pago)  
+📡 [4.3. Pase a producción](#43pase-a-producci%C3%B3n)  
+🎨 [5. Personalización](#-5-personalizaci%C3%B3n)  
+🛠️ [6. Servidores](#-6-servidores)    
+📚 [7. Consideraciones](#-7-consideraciones)
 
 ## ➡️ 1. Introducción
 
@@ -30,7 +30,7 @@ Este manual está diseñado para facilitar la comprensión del flujo de integrac
 
 - Comprender el flujo de comunicación de la pasarela. [Información Aquí](https://secure.micuentaweb.pe/doc/es-PE/rest/V4.0/javascript/guide/start.html)
 - Extraer credenciales del Back Office Vendedor. [Guía Aquí](https://github.com/izipay-pe/obtener-credenciales-de-conexion)
-- Descargar y ejecutar un servidor (Backend) API REST. [Servidores disponibles](https://github.com/izipay-pe/Readme-Template/blob/main/README.md#-6-servidores)
+- Descargar y ejecutar un servidor (Backend) API REST. [Servidores disponibles](#-6-servidore)
 - Para este proyecto utilizamos la herramienta Visual Studio Code.
 > [!NOTE]
 > Tener en cuenta que, para que el desarrollo de tu proyecto, eres libre de emplear tus herramientas preferidas.
