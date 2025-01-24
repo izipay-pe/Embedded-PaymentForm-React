@@ -260,15 +260,15 @@ Lista de servidores disponibles:
 
 | Lenguaje | Proyecto                                                                 |
 |---------------------|--------------------------------------------------------------------------|
-| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)          | [Server-Redirect-PHP](enlace_a_proyecto_php)                                           |
-| ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white) | [Server-Redirect-Laravel](enlace_a_proyecto_laravel)                                   |
-| ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)  | [Server-Redirect-Django](enlace_a_proyecto_django)                                     |
-| ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)    | [Server-Redirect-Flask](enlace_a_proyecto_flask)                                       |
-| ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=flat&logo=dotnet&logoColor=white)      | [Server-Redirect-.NET](enlace_a_proyecto_dotnet)                                       |
-| ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | [Server-Redirect-NodeJS](enlace_a_proyecto_nodejs)                                     |
-| ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) | [Server-Redirect-NextJS](enlace_a_proyecto_nextjs)                                     |
-| ![Java](https://img.shields.io/badge/Servlet%20Java-007396?style=flat&logo=java&logoColor=white) | [Server-Redirect-Servelt-Java](enlace_a_proyecto_servlet_java)                         |
-| ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=springboot&logoColor=white) | [Server-Redirect-Springboot-Java](enlace_a_proyecto_spring_boot)                         |
+| ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)          | [Server-PaymentForm-PHP](https://github.com/izipay-pe/Server-PaymentForm-PHP)                                           |
+| ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white) | [Server-PaymentForm-Laravel](https://github.com/izipay-pe/Server-PaymentForm-Laravel)                                   |
+| ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)  | [Server-PaymentForm-Django](https://github.com/izipay-pe/Server-PaymentForm-Django)                                     |
+| ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)    | [Server-PaymentForm-Flask](https://github.com/izipay-pe/Server-PaymentForm-Flask)                                       |
+| ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=flat&logo=dotnet&logoColor=white)      | [Server-PaymentForm-.NET](https://github.com/izipay-pe/Server-PaymentForm-.NET)                                       |
+| ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | [Server-PaymentForm-NodeJS](https://github.com/izipay-pe/Server-PaymentForm-NodeJS)                                     |
+| ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) | [Server-PaymentForm-NextJS](https://github.com/izipay-pe/Server-PaymentForm-NextJS)                                     |
+| ![Java](https://img.shields.io/badge/Servlet%20Java-007396?style=flat&logo=java&logoColor=white) | [Server-PaymentForm-Servelt-Java](https://github.com/izipay-pe/Server-PaymentForm-Servelt-Java)                         |
+| ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat&logo=springboot&logoColor=white) | [Server-PaymentForm-Springboot-Java](https://github.com/izipay-pe/Server-PaymentForm-Springboot)                         |
 
 
 ## 📚 7. Consideraciones
