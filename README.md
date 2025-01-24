@@ -262,8 +262,8 @@ Lista de servidores disponibles:
 |---------------------|--------------------------------------------------------------------------|
 | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white)          | [Server-PaymentForm-PHP](https://github.com/izipay-pe/Server-PaymentForm-PHP)                                           |
 | ![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white) | [Server-PaymentForm-Laravel](https://github.com/izipay-pe/Server-PaymentForm-Laravel)                                   |
-| ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)  | [Server-PaymentForm-Django](https://github.com/izipay-pe/Server-PaymentForm-Django)                                     |
-| ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)    | [Server-PaymentForm-Flask](https://github.com/izipay-pe/Server-PaymentForm-Flask)                                       |
+| ![Django](https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white)  | [Server-PaymentForm-Python-Django](Server-PaymentForm-Python-Django)                                     |
+| ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)    | [Server-PaymentForm-Python-Flask](Server-PaymentForm-Python-Flask)                                       |
 | ![.NET](https://img.shields.io/badge/.NET-5C2D91?style=flat&logo=dotnet&logoColor=white)      | [Server-PaymentForm-.NET](https://github.com/izipay-pe/Server-PaymentForm-.NET)                                       |
 | ![NodeJS](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white) | [Server-PaymentForm-NodeJS](https://github.com/izipay-pe/Server-PaymentForm-NodeJS)                                     |
 | ![NextJS](https://img.shields.io/badge/Next.js-000000?style=flat&logo=nextdotjs&logoColor=white) | [Server-PaymentForm-NextJS](https://github.com/izipay-pe/Server-PaymentForm-NextJS)                                     |
